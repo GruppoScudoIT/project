@@ -28,4 +28,4 @@ class ProjectStatus(models.Model):
         for vals in vals_list:
             seq = self.env["ir.sequence"].next_by_code("project.status") or 0
             vals["status_sequence"] = seq
-        return super(ProjectStatus, self).create(vals_list)
+        return super().create(vals_list)
